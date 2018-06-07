@@ -100,6 +100,7 @@ public class Localization {
 	///
 	/// - Returns: path
 	private class func resourceBundle() -> Bundle? {
+		var framework: Bundle!
    		if #available(iOS 12.0, *) {
         		framework = Bundle(identifier: "org.cocoapods.SwiftDate")
     		}
