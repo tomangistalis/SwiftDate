@@ -100,7 +100,12 @@ public class Localization {
 	///
 	/// - Returns: path
 	private class func resourceBundle() -> Bundle? {
-		let framework = Bundle(for: DateInRegion.self)
+   		if #available(iOS 12.0, *) {
+        		framework = Bundle(identifier: "org.cocoapods.SwiftDate")
+    		}
+    		else {
+        		framework = Bundle(for: DateInRegion.self)
+   		}
 		let path = NSURL(fileURLWithPath: framework.resourcePath!).appendingPathComponent("SwiftDate.bundle")
 		let bundle = Bundle(url: path!)
 		guard let _ = bundle else {
