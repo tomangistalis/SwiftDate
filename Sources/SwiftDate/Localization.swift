@@ -102,7 +102,7 @@ public class Localization {
 	private class func resourceBundle() -> Bundle? {
 		var framework: Bundle!
    		if #available(iOS 12.0, *) {
-        		framework = Bundle(identifier: "org.cocoapods.SwiftDate")
+        		framework = Bundle(identifier: "com.SwiftDate.SwiftDate-iOS")
     		}
     		else {
         		framework = Bundle(for: DateInRegion.self)
